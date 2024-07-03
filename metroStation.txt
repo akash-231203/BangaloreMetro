@@ -1,5 +1,6 @@
 // Define the metro stations and their connections (graph)
 const metroStations = {
+  // Purple line
     'Challaghata' : {
       'Kengeri' : 2.3
     },
@@ -152,360 +153,364 @@ const metroStations = {
     'Whitefield (Kadugodi)' : {
       'Channasandra (Hopefarm)' : 1.5
     },
+
+    // Green line
     'Madavara' : {
-      'Chikkabidarakallu' : 1
+      'Chikkabidarakallu' : 1.7
     },
     'Chikkabidarakallu' : {
-      'Madavara' : 1,
-      'Manjunathanagar' : 1
+      'Madavara' : 1.7,
+      'Manjunathanagar' : 0.75
     },
     'Manjunathanagar' : {
-      'Chikkabidarakallu' : 1,
-      'Nagasandra' : 1
+      'Chikkabidarakallu' : 0.75,
+      'Nagasandra' : 0.7
     },
     'Nagasandra' : {
-      'Manjunathanagar' : 1,
-      'Dasarahalli' : 1
+      'Manjunathanagar' : 0.7,
+      'Dasarahalli' : 2.5
     },
     'Dasarahalli' : {
-      'Nagasandra' : 1,
-      'Jalahalli' : 1
+      'Nagasandra' : 2.5,
+      'Jalahalli' : 1.5
     },
     'Jalahalli' : {
-      'Dasarahalli' : 1,
-      'Peenya Industry' : 1
+      'Dasarahalli' : 1.5,
+      'Peenya Industry' : 2.2
     },
     'Peenya Industry' : {
-      'Jalahalli' : 1,
-      'Peenya' : 1
+      'Jalahalli' : 2.2,
+      'Peenya' : 1.2
     },
     'Peenya' : {
-      'Peenya Industry' : 1,
-      'Goraguntepalya' : 1
+      'Peenya Industry' : 1.2,
+      'Goraguntepalya' : 1.9
     },
     'Goraguntepalya' : {
-      'Peenya' : 1,
+      'Peenya' : 1.9,
       'Yeshwantpur' : 1
     },
     'Yeshwantpur' : {
       'Goraguntepalya' : 1,
-      'Sandal Soap Factory' : 1
+      'Sandal Soap Factory' : 1.6
     },
     'Sandal Soap Factory' : {
-      'Yeshwantpur' : 1,
-      'Mahalakshmi' : 1
+      'Yeshwantpur' : 1.6,
+      'Mahalakshmi' : 1.3
     },
     'Mahalakshmi' : {
-      'Sandal Soap Factory' : 1,
-      'Rajajinagar' : 1
+      'Sandal Soap Factory' : 1.3,
+      'Rajajinagar' : 1.5
     },
     'Rajajinagar' : {
-      'Mahalakshmi' : 1,
-      'Kuvempu Road' : 1
+      'Mahalakshmi' : 1.5,
+      'Kuvempu Road' : 1.4
     },
     'Kuvempu Road' : {
-      'Rajajinagar' : 1,
-      'Srirampura' : 1
+      'Rajajinagar' : 1.4,
+      'Srirampura' : 1.1
     },
     'Srirampura' : {
-      'Kuvempu Road' : 1,
-      'Sampige Road' : 1
+      'Kuvempu Road' : 1.1,
+      'Sampige Road' : 1.5
     },
     'Sampige Road' : {
-      'Srirampura' : 1,
-      'Majestic' : 1
+      'Srirampura' : 1.5,
+      'Majestic' : 1.2
     },
     'Chickpete' : {
-      'Majestic' : 1,
-      'Krishna Rajendra Market' : 1
+      'Majestic' : 0.9,
+      'Krishna Rajendra Market' : 0.9
     },
     'Krishna Rajendra Market' : {
-      'Chickpete' : 1,
-      'National College' : 1
+      'Chickpete' : 0.9,
+      'National College' : 1.6
     },
     'National College' : {
-      'Krishna Rajendra Market' : 1,
-      'Lalbagh' : 1
+      'Krishna Rajendra Market' : 1.6,
+      'Lalbagh' : 1.2
     },
     'Lalbagh' : {
-      'National College' : 1,
-      'South End Circle' : 1
+      'National College' : 1.2,
+      'South End Circle' : 1.4
     },
     'South End Circle' : {
-      'Lalbagh' : 1,
-      'Jayanagar' : 1
+      'Lalbagh' : 1.4,
+      'Jayanagar' : 1.2
     },
     'Jayanagar' : {
-      'South End Circle' : 1,
-      'Rashtreeya Vidyalaya Road' : 1
+      'South End Circle' : 1.2,
+      'Rashtreeya Vidyalaya Road' : 1.3
     },
     'Rashtreeya Vidyalaya Road' : {
-      'Jayanagar' : 1,
-      'Banashankari' : 1,
-      'Ragigudda' : 1
+      'Jayanagar' : 1.3,
+      'Banashankari' : 1.7,
+      'Ragigudda' : 1.5
     },
     'Banashankari' : {
-      'Rashtreeya Vidyalaya Road' : 1,
-      'Jayaprakash Nagar' : 1
+      'Rashtreeya Vidyalaya Road' : 1.7,
+      'Jayaprakash Nagar' : 1.1
     },
     'Jayaprakash Nagar' : {
-      'Banashankari' : 1,
-      'Yelachenahalli' : 1
+      'Banashankari' : 1.1,
+      'Yelachenahalli' : 1.2
     },
     'Yelachenahalli' : {
-      'Jayaprakash Nagar' : 1,
-      'Konanakunte Cross' : 1
+      'Jayaprakash Nagar' : 1.2,
+      'Konanakunte Cross' : 2.0
     },
     'Konanakunte Cross' : {
-      'Yelachenahalli' : 1,
-      'Doddakallasandra' : 1
+      'Yelachenahalli' : 2.0,
+      'Doddakallasandra' : 1.5
     },
     'Doddakallasandra' : {
-      'Konanakunte Cross' : 1,
-      'Vajarahalli' : 1
+      'Konanakunte Cross' : 1.5,
+      'Vajarahalli' : 1.4
     },
     'Vajarahalli' : {
-      'Doddakallasandra' : 1,
-      'Thalaghattapura' : 1
+      'Doddakallasandra' : 1.4,
+      'Thalaghattapura' : 2.0
     },
     'Thalaghattapura' : {
-      'Vajarahalli' : 1,
-      'Silk Institute' : 1
+      'Vajarahalli' : 2.0,
+      'Silk Institute' : 2.2
     },
     'Silk Institute' : {
-      'Thalaghattapura' : 1,
+      'Thalaghattapura' : 2.2,
     },
+
+    // Yellow line
     'Ragigudda' : {
-      'Rashtreeya Vidyalaya Road' : 1,
-      'Jayadeva Hospital' : 1
+      'Rashtreeya Vidyalaya Road' : 1.5,
+      'Jayadeva Hospital' : 1.2
     },
     'Jayadeva Hospital' : {
-      'Ragigudda' : 1,
-      'BTM Layout' : 1,
-      'Tavarekere' : 1,
-      'JP Nagar 4th Phase' : 1
+      'Ragigudda' : 1.2,
+      'BTM Layout' : 1.4,
+      'Tavarekere' : 2.0,
+      'JP Nagar 4th Phase' : 1.4
     },
     'BTM Layout' : {
-      'Jayadeva Hospital' : 1,
-      'Central Silk Board' : 1
+      'Jayadeva Hospital' : 1.4,
+      'Central Silk Board' : 1.2
     },
     'Central Silk Board' : {
-      'BTM Layout' : 1,
-      'HSR Layout' : 1,
-      'Bommanahalli' : 1
+      'BTM Layout' : 1.2,
+      'HSR Layout' : 1.6,
+      'Bommanahalli' : 1.6
     },
     'Bommanahalli' : {
-      'Central Silk Board' : 1,
-      'Hongasandra' : 1
+      'Central Silk Board' : 1.6,
+      'Hongasandra' : 2.7
     },
     'Hongasandra' : {
-      'Bommanahalli' : 1,
-      'Kudlu Gate' : 1
+      'Bommanahalli' : 2.7,
+      'Kudlu Gate' : 1.5
     },
     'Kudlu Gate' : {
-      'Hongasandra' : 1,
-      'Singasandra' : 1
+      'Hongasandra' : 1.5,
+      'Singasandra' : 1.2
     },
     'Singasandra' : {
-      'Kudlu Gate' : 1,
-      'Hosa Road' : 1
+      'Kudlu Gate' : 1.2,
+      'Hosa Road' : 1.8
     },
     'Hosa Road' : {
-      'Singasandra' : 1,
+      'Singasandra' : 1.8,
       'Beratena Agrahara' : 1
     },
     'Beratena Agrahara' : {
       'Hosa Road' : 1,
-      'Electronic City' : 1
+      'Electronic City' : 2.9
     },
     'Electronic City' : {
-      'Beratena Agrahara' : 1,
-      'Konnapana Agrahara' : 1
+      'Beratena Agrahara' : 2.9,
+      'Konnapana Agrahara' : 1.5
     },
     'Konnapana Agrahara' : {
-      'Electronic City' : 1,
-      'Huskur Road' : 1
+      'Electronic City' : 1.5,
+      'Huskur Road' : 1.5
     },
     'Huskur Road' : {
-      'Konnapana Agrahara' : 1,
-      'Hebbagodi' : 1
+      'Konnapana Agrahara' : 1.5,
+      'Hebbagodi' : 1.5
     },
     'Hebbagodi' : {
-      'Huskur Road' : 1,
-      'Bommasandra' : 1
+      'Huskur Road' : 1.5,
+      'Bommasandra' : 1.7
     },
     'Bommasandra' : {
-      'Hebbagodi' : 1
+      'Hebbagodi' : 1.7
     },
+
+    // Blue line
     'HSR Layout' : {
-      'Central Silk Board' : 1,
-      'Agara Lake' : 1
+      'Central Silk Board' : 1.6,
+      'Agara Lake' : 1.3
     },
     'Agara Lake' : {
-      'HSR Layout' : 1,
-      'Iblur' : 1
+      'HSR Layout' : 1.3,
+      'Iblur' : 1.4
     },
     'Iblur' : {
-      'Agara Lake' : 1,
-      'Bellandur' : 1
+      'Agara Lake' : 1.4,
+      'Bellandur' : 1.7
     },
     'Bellandur' : {
-      'Iblur' : 1,
-      'Devarabeesanahalli' : 1
+      'Iblur' : 1.7,
+      'Devarabeesanahalli' : 1.2
     },
     'Devarabeesanahalli' : {
-      'Bellandur' : 1,
-      'Kadubeesanahalli' : 1
+      'Bellandur' : 1.2,
+      'Kadubeesanahalli' : 1.4
     },
     'Kadubeesanahalli' : {
-      'Devarabeesanahalli' : 1,
-      'Marathahalli' : 1
+      'Devarabeesanahalli' : 1.4,
+      'Marathahalli' : 1.6
     },
     'Marathahalli' : {
-      'Kadubeesanahalli' : 1,
-      'ISRO (Karthik Nagar)' : 1
+      'Kadubeesanahalli' : 1.6,
+      'ISRO (Karthik Nagar)' : 1.4
     },
     'ISRO (Karthik Nagar)' : {
-      'Marathahalli' : 1,
-      'Doddanekundi' : 1
+      'Marathahalli' : 1.4,
+      'Doddanekundi' : 1.6
     },
     'Doddanekundi' : {
-      'ISRO (Karthik Nagar)' : 1,
-      'DRDO Sports Complex' : 1
+      'ISRO (Karthik Nagar)' : 1.6,
+      'DRDO Sports Complex' : 1.4
     },
     'DRDO Sports Complex' : {
-      'Doddanekundi' : 1,
-      'Mahadevapura' : 1
+      'Doddanekundi' : 1.4,
+      'Mahadevapura' : 1.4
     },
     'Mahadevapura' : {
-      'DRDO Sports Complex' : 1,
-      'KR Pura' : 1
+      'DRDO Sports Complex' : 1.4,
+      'KR Pura' : 1.7
     },
     'Kasturinagar' : {
-      'KR Pura' : 1,
-      'Horamavu' : 1
+      'KR Pura' : 3.1,
+      'Horamavu' : 2.1
     },
     'Horamavu' : {
-      'Kasturinagar' : 1,
-      'HRBR Layout' : 1
+      'Kasturinagar' : 2.1,
+      'HRBR Layout' : 1.1
     },
     'HRBR Layout' : {
-      'Horamavu' : 1,
-      'Kalyan Nagar' : 1
+      'Horamavu' : 1.1,
+      'Kalyan Nagar' : 1.3
     },
     'Kalyan Nagar' : {
-      'HRBR Layout' : 1,
-      'HBR Layout' : 1
+      'HRBR Layout' : 1.3,
+      'HBR Layout' : 1.2
     },
     'HBR Layout' : {
-      'Kalyan Nagar' : 1,
-      'Nagawara' : 1
+      'Kalyan Nagar' : 1.2,
+      'Nagawara' : 1.4
     },
     'Nagawara' : {
-      'HBR Layout' : 1,
-      'Veerannapalya' : 1,
-      'Kadugundanahalli' : 1
+      'HBR Layout' : 1.4,
+      'Veerannapalya' : 1.3,
+      'Kadugundanahalli' : 1.2
     },
     'Veerannapalya' : {
-      'Nagawara' : 1,
-      'Kempapura' : 1
+      'Nagawara' : 1.3,
+      'Kempapura' : 1.4
     },
     'Kempapura' : {
-      'Veerannapalya' : 1,
-      'Hebbal' : 1
+      'Veerannapalya' : 1.4,
+      'Hebbal' : 1.5
     },
     'Hebbal' : {
-      'Kempapura' : 1,
-      'Kodigehalli' : 1
+      'Kempapura' : 1.5,
+      'Kodigehalli' : 2.0
     },
     'Kodigehalli' : {
-      'Hebbal' : 1,
-      'Jakkur Cross' : 1
+      'Hebbal' : 2.0,
+      'Jakkur Cross' : 2.4
     },
     'Jakkur Cross' : {
-      'Kodigehalli' : 1,
-      'Yelahanka' : 1
+      'Kodigehalli' : 2.4,
+      'Yelahanka' : 3.5
     },
     'Yelahanka' : {
-      'Jakkur Cross' : 1,
-      'Bagalur Cross' : 1
+      'Jakkur Cross' : 3.5,
+      'Bagalur Cross' : 3.6
     },
     'Bagalur Cross' : {
-      'Yelahanka' : 1,
-      'Bettahalasuru' : 1
+      'Yelahanka' : 3.6,
+      'Bettahalasuru' : 3.5
     },
     'Bettahalasuru' : {
-      'Bagalur Cross' : 1,
-      'Doddajala' : 1
+      'Bagalur Cross' : 3.5,
+      'Doddajala' : 5.5
     },
     'Doddajala' : {
-      'Bettahalasuru' : 1,
-      'Airport City' : 1
-    },
-    'Airport City' : {
-      'Doddajala' : 1,
-      'Kempegowda International Airport' : 1
+      'Bettahalasuru' : 5.5,
+      'Kempegowda International Airport' : 3.8
     },
     'Kempegowda International Airport' : {
-      'Airport City' : 1,
+      'Doddajala' : 3.8
     },
+
+    // Pink line
     'Kadugundanahalli' : {
-      'Nagawara' : 1,
-      'Venkateshpura' : 1
+      'Nagawara' : 1.2,
+      'Venkateshpura' : 1.2
     },
     'Venkateshpura' : {
-      'Kadugundanahalli' : 1,
-      'Tannery Road' : 1
+      'Kadugundanahalli' : 1.2,
+      'Tannery Road' : 1.4
     },
     'Tannery Road' : {
-      'Venkateshpura' : 1,
-      'Pottery Town' : 1
+      'Venkateshpura' : 1.4,
+      'Pottery Town' : 1.5
     },
     'Pottery Town' : {
-      'Tannery Road' : 1,
-      'Cantonment' : 1
+      'Tannery Road' : 1.5,
+      'Cantonment' : 1.3
     },
     'Cantonment' : {
-      'Pottery Town' : 1,
-      'Shivajinagar' : 1
+      'Pottery Town' : 1.3,
+      'Shivajinagar' : 1.3
     },
     'Shivajinagar' : {
-      'Cantonment' : 1,
-      'Mahatma Gandhi Road' : 1
+      'Cantonment' : 1.3,
+      'Mahatma Gandhi Road' : 1.1
     },
     'Rashtriya Military School' : {
-      'Mahatma Gandhi Road' : 1,
-      'Langford Town' : 1
+      'Mahatma Gandhi Road' : 1.2,
+      'Langford Town' : 1.2
     },
     'Langford Town' : {
-      'Rashtriya Military School' : 1,
-      'Lakkasandra' : 1
+      'Rashtriya Military School' : 1.2,
+      'Lakkasandra' : 1.5
     },
     'Lakkasandra' : {
-      'Langford Town' : 1,
-      'Dairy Circle' : 1
+      'Langford Town' : 1.5,
+      'Dairy Circle' : 2.5
     },
     'Dairy Circle' : {
-      'Lakkasandra' : 1,
-      'Tavarekere' : 1
+      'Lakkasandra' : 2.5,
+      'Tavarekere' : 2.5
     },
     'Tavarekere' : {
-      'Dairy Circle' : 1,
-      'Jayadeva Hospital' : 1
+      'Dairy Circle' : 2.5,
+      'Jayadeva Hospital' : 2.0
     },
     'JP Nagar 4th Phase' : {
-      'Jayadeva Hospital' : 1,
-      'IIM Bangalore' : 1
+      'Jayadeva Hospital' : 1.4,
+      'IIM Bangalore' : 1.5
     },
     'IIM Bangalore' : {
-      'JP Nagar 4th Phase' : 1,
-      'Hulimavu' : 1
+      'JP Nagar 4th Phase' : 1.5,
+      'Hulimavu' : 1.4
     },
     'Hulimavu' : {
-      'IIM Bangalore' : 1,
-      'Kalena Agrahara' : 1
+      'IIM Bangalore' : 1.4,
+      'Kalena Agrahara' : 2.1
     },
     'Kalena Agrahara' : {
-      'Hulimavu' : 1,
+      'Hulimavu' : 2.1,
     },
   };
